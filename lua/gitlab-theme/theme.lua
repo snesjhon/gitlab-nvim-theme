@@ -1,4 +1,4 @@
-local util  = require("gitlab-light.util")
+local util  = require("gitlab-theme.util")
 local theme = {}
 
 -- ── 1. Editor ─────────────────────────────────────────────────────────────────
@@ -141,7 +141,6 @@ function theme.loadSyntax(c)
     Error          = { fg = c.red, style = "bold,underline" },
     Todo           = { fg = c.bg, bg = c.orange, style = "bold" },
 
-    -- Nvim-specific
     healthSuccess  = { fg = c.green, style = "bold" },
     healthError    = { fg = c.red,   style = "bold" },
     healthWarning  = { fg = c.orange },
@@ -222,7 +221,7 @@ function theme.loadTreeSitter(c)
     ["@label"]                 = { fg = c.red },
     ["@attribute"]             = { fg = c.orange },
 
-    -- Markup (Markdown, etc.)
+    -- Markup (Markdown etc.)
     ["@markup.heading"]        = { fg = c.blue,   style = "bold" },
     ["@markup.italic"]         = { style = "italic" },
     ["@markup.bold"]           = { style = "bold" },
@@ -242,69 +241,69 @@ end
 function theme.loadFiletypes(c)
   util.loadColorSet({
     -- YAML
-    yamlBlockMappingKey  = { fg = c.blue },
-    yamlKeyValueDelimiter= { fg = c.cyan },
-    yamlBool             = { fg = c.orange, style = c.bold },
-    yamlNull             = { fg = c.fg_comment },
-    yamlString           = { fg = c.green },
-    yamlInteger          = { fg = c.orange },
-    yamlFloat            = { fg = c.orange },
-    yamlAnchor           = { fg = c.purple },
-    yamlAlias            = { fg = c.purple },
-    yamlTag              = { fg = c.cyan },
-    yamlDocumentStart    = { fg = c.fg_comment },
-    yamlDocumentEnd      = { fg = c.fg_comment },
+    yamlBlockMappingKey      = { fg = c.blue },
+    yamlKeyValueDelimiter    = { fg = c.cyan },
+    yamlBool                 = { fg = c.orange, style = c.bold },
+    yamlNull                 = { fg = c.fg_comment },
+    yamlString               = { fg = c.green },
+    yamlInteger              = { fg = c.orange },
+    yamlFloat                = { fg = c.orange },
+    yamlAnchor               = { fg = c.purple },
+    yamlAlias                = { fg = c.purple },
+    yamlTag                  = { fg = c.cyan },
+    yamlDocumentStart        = { fg = c.fg_comment },
+    yamlDocumentEnd          = { fg = c.fg_comment },
 
     -- Markdown
-    markdownH1           = { fg = c.red,    style = "bold" },
-    markdownH2           = { fg = c.orange, style = "bold" },
-    markdownH3           = { fg = c.green,  style = "bold" },
-    markdownH4           = { fg = c.blue,   style = "bold" },
-    markdownH5           = { fg = c.purple, style = "bold" },
-    markdownH6           = { fg = c.cyan,   style = "bold" },
+    markdownH1               = { fg = c.red,    style = "bold" },
+    markdownH2               = { fg = c.orange, style = "bold" },
+    markdownH3               = { fg = c.green,  style = "bold" },
+    markdownH4               = { fg = c.blue,   style = "bold" },
+    markdownH5               = { fg = c.purple, style = "bold" },
+    markdownH6               = { fg = c.cyan,   style = "bold" },
     markdownHeadingDelimiter = { fg = c.fg_gutter },
-    markdownCode         = { fg = c.green,  bg = c.bg_alt },
-    markdownCodeBlock    = { fg = c.green },
-    markdownLinkText     = { fg = c.blue },
-    markdownUrl          = { fg = c.link,   style = "underline" },
-    markdownBold         = { style = "bold" },
-    markdownItalic       = { style = "italic" },
-    markdownListMarker   = { fg = c.red },
-    markdownRule         = { fg = c.fg_gutter },
+    markdownCode             = { fg = c.green,  bg = c.bg_alt },
+    markdownCodeBlock        = { fg = c.green },
+    markdownLinkText         = { fg = c.blue },
+    markdownUrl              = { fg = c.link,   style = "underline" },
+    markdownBold             = { style = "bold" },
+    markdownItalic           = { style = "italic" },
+    markdownListMarker       = { fg = c.red },
+    markdownRule             = { fg = c.fg_gutter },
 
     -- HTML
-    htmlTag              = { fg = c.fg_alt },
-    htmlEndTag           = { fg = c.fg_alt },
-    htmlTagName          = { fg = c.red },
-    htmlArg              = { fg = c.orange },
-    htmlString           = { fg = c.green },
-    htmlSpecialChar      = { fg = c.cyan },
-    htmlLink             = { fg = c.link,   style = "underline" },
-    htmlBold             = { style = "bold" },
-    htmlItalic           = { style = "italic" },
+    htmlTag                  = { fg = c.fg_alt },
+    htmlEndTag               = { fg = c.fg_alt },
+    htmlTagName              = { fg = c.red },
+    htmlArg                  = { fg = c.orange },
+    htmlString               = { fg = c.green },
+    htmlSpecialChar          = { fg = c.cyan },
+    htmlLink                 = { fg = c.link,   style = "underline" },
+    htmlBold                 = { style = "bold" },
+    htmlItalic               = { style = "italic" },
 
     -- JSON
-    jsonKeyword          = { fg = c.blue },
-    jsonString           = { fg = c.green },
-    jsonNumber           = { fg = c.orange },
-    jsonBoolean          = { fg = c.orange, style = c.bold },
-    jsonNull             = { fg = c.fg_comment },
-    jsonBraces           = { fg = c.fg_alt },
+    jsonKeyword              = { fg = c.blue },
+    jsonString               = { fg = c.green },
+    jsonNumber               = { fg = c.orange },
+    jsonBoolean              = { fg = c.orange, style = c.bold },
+    jsonNull                 = { fg = c.fg_comment },
+    jsonBraces               = { fg = c.fg_alt },
 
     -- Shell
-    shVariable           = { fg = c.fg },
-    shDeref              = { fg = c.fg },
-    shQuote              = { fg = c.green },
-    shCommandSub         = { fg = c.cyan },
-    shSpecial            = { fg = c.cyan },
-    shStatement          = { fg = c.red,    style = c.bold },
+    shVariable               = { fg = c.fg },
+    shDeref                  = { fg = c.fg },
+    shQuote                  = { fg = c.green },
+    shCommandSub             = { fg = c.cyan },
+    shSpecial                = { fg = c.cyan },
+    shStatement              = { fg = c.red,    style = c.bold },
   })
 end
 
 -- ── 5. LSP ────────────────────────────────────────────────────────────────────
 function theme.loadLSP(c)
   util.loadColorSet({
-    -- Diagnostics (vim.diagnostic)
+    -- Diagnostics
     DiagnosticError              = { fg = c.red },
     DiagnosticWarn               = { fg = c.orange },
     DiagnosticInfo               = { fg = c.blue },
@@ -344,7 +343,7 @@ function theme.loadLSP(c)
     -- Signature help
     LspSignatureActiveParameter  = { fg = c.orange, style = "bold,underline" },
 
-    -- Semantic tokens — @lsp.type.*
+    -- Semantic tokens
     ["@lsp.type.class"]          = { fg = c.purple },
     ["@lsp.type.decorator"]      = { fg = c.orange },
     ["@lsp.type.enum"]           = { fg = c.purple },
@@ -377,7 +376,7 @@ function theme.loadPlugins(c)
     TelescopeBorder          = { fg = c.border,     bg = c.bg_alt },
     TelescopePromptNormal    = { fg = c.fg,         bg = c.bg },
     TelescopePromptBorder    = { fg = c.blue,       bg = c.bg },
-    TelescopePromptTitle     = { fg = c.bg,         bg = c.blue, style = "bold" },
+    TelescopePromptTitle     = { fg = c.bg,         bg = c.blue,  style = "bold" },
     TelescopePreviewTitle    = { fg = c.bg,         bg = c.green, style = "bold" },
     TelescopeResultsTitle    = { fg = c.bg_alt,     bg = c.bg_alt },
     TelescopePromptPrefix    = { fg = c.blue },
@@ -418,21 +417,21 @@ function theme.loadPlugins(c)
     NERDTreeHelp             = { fg = c.fg_comment },
 
     -- ── Bufferline ─────────────────────────────────────────────────────
-    BufferLineBackground     = { fg = c.fg_gutter,  bg = c.bg_alt },
-    BufferLineBufferSelected = { fg = c.fg,         bg = c.bg, style = "bold" },
-    BufferLineBufferVisible  = { fg = c.fg,         bg = c.bg_alt },
-    BufferLineSeparator      = { fg = c.border,     bg = c.bg_alt },
-    BufferLineSeparatorSelected  = { fg = c.border, bg = c.bg },
-    BufferLineTab            = { fg = c.fg_gutter,  bg = c.bg_alt },
-    BufferLineTabSelected    = { fg = c.blue,       bg = c.bg, style = "bold" },
-    BufferLineTabClose       = { fg = c.red,        bg = c.bg_alt },
-    BufferLineIndicatorSelected  = { fg = c.blue,   bg = c.bg },
-    BufferLineModified       = { fg = c.orange,     bg = c.bg_alt },
-    BufferLineModifiedSelected   = { fg = c.orange, bg = c.bg },
-    BufferLineError          = { fg = c.red,        bg = c.bg_alt },
-    BufferLineErrorSelected  = { fg = c.red,        bg = c.bg },
-    BufferLineWarning        = { fg = c.orange,     bg = c.bg_alt },
-    BufferLineWarningSelected= { fg = c.orange,     bg = c.bg },
+    BufferLineBackground        = { fg = c.fg_gutter, bg = c.bg_alt },
+    BufferLineBufferSelected    = { fg = c.fg,         bg = c.bg, style = "bold" },
+    BufferLineBufferVisible     = { fg = c.fg,         bg = c.bg_alt },
+    BufferLineSeparator         = { fg = c.border,     bg = c.bg_alt },
+    BufferLineSeparatorSelected = { fg = c.border,     bg = c.bg },
+    BufferLineTab               = { fg = c.fg_gutter,  bg = c.bg_alt },
+    BufferLineTabSelected       = { fg = c.blue,       bg = c.bg, style = "bold" },
+    BufferLineTabClose          = { fg = c.red,        bg = c.bg_alt },
+    BufferLineIndicatorSelected = { fg = c.blue,       bg = c.bg },
+    BufferLineModified          = { fg = c.orange,     bg = c.bg_alt },
+    BufferLineModifiedSelected  = { fg = c.orange,     bg = c.bg },
+    BufferLineError             = { fg = c.red,        bg = c.bg_alt },
+    BufferLineErrorSelected     = { fg = c.red,        bg = c.bg },
+    BufferLineWarning           = { fg = c.orange,     bg = c.bg_alt },
+    BufferLineWarningSelected   = { fg = c.orange,     bg = c.bg },
 
     -- ── GitSigns ───────────────────────────────────────────────────────
     GitSignsAdd              = { fg = c.green },
@@ -447,24 +446,24 @@ function theme.loadPlugins(c)
     GitSignsCurrentLineBlame = { fg = c.fg_comment, style = c.italic },
 
     -- ── Neogit ─────────────────────────────────────────────────────────
-    NeogitBranch             = { fg = c.purple, style = "bold" },
-    NeogitRemote             = { fg = c.blue },
-    NeogitHunkHeader         = { fg = c.fg,     bg = c.bg_alt, style = "bold" },
-    NeogitHunkHeaderHighlight= { fg = c.fg,     bg = c.bg_highlight, style = "bold" },
-    NeogitDiffAdd            = { fg = c.green,  bg = "#E6F4EC" },
-    NeogitDiffDelete         = { fg = c.red,    bg = "#FAEAE8" },
+    NeogitBranch              = { fg = c.purple, style = "bold" },
+    NeogitRemote              = { fg = c.blue },
+    NeogitHunkHeader          = { fg = c.fg,    bg = c.bg_alt,       style = "bold" },
+    NeogitHunkHeaderHighlight = { fg = c.fg,    bg = c.bg_highlight, style = "bold" },
+    NeogitDiffAdd             = { fg = c.green, bg = "#E6F4EC" },
+    NeogitDiffDelete          = { fg = c.red,   bg = "#FAEAE8" },
     NeogitDiffContextHighlight= { bg = c.bg_highlight },
-    NeogitNotificationInfo   = { fg = c.blue },
-    NeogitNotificationWarning= { fg = c.orange },
-    NeogitNotificationError  = { fg = c.red },
+    NeogitNotificationInfo    = { fg = c.blue },
+    NeogitNotificationWarning = { fg = c.orange },
+    NeogitNotificationError   = { fg = c.red },
 
     -- ── nvim-cmp ───────────────────────────────────────────────────────
-    CmpDocumentation         = { fg = c.fg,         bg = c.bg_alt },
-    CmpDocumentationBorder   = { fg = c.border,     bg = c.bg_alt },
+    CmpDocumentation         = { fg = c.fg,       bg = c.bg_alt },
+    CmpDocumentationBorder   = { fg = c.border,   bg = c.bg_alt },
     CmpItemAbbr              = { fg = c.fg },
-    CmpItemAbbrDeprecated    = { fg = c.fg_gutter,  style = "strikethrough" },
-    CmpItemAbbrMatch         = { fg = c.blue,       style = "bold" },
-    CmpItemAbbrMatchFuzzy    = { fg = c.blue,       style = "bold" },
+    CmpItemAbbrDeprecated    = { fg = c.fg_gutter, style = "strikethrough" },
+    CmpItemAbbrMatch         = { fg = c.blue,      style = "bold" },
+    CmpItemAbbrMatchFuzzy    = { fg = c.blue,      style = "bold" },
     CmpItemMenu              = { fg = c.fg_comment },
     CmpItemKindDefault       = { fg = c.fg_alt },
     CmpItemKindKeyword       = { fg = c.red },
@@ -494,18 +493,11 @@ function theme.loadPlugins(c)
     CmpItemKindText          = { fg = c.fg_comment },
 
     -- ── indent-blankline ───────────────────────────────────────────────
-    IndentBlanklineChar            = { fg = c.border },
-    IndentBlanklineContextChar     = { fg = c.blue },
-    IndentBlanklineContextStart    = { sp = c.blue, style = "underline" },
-    IndentBlanklineIndent1         = { fg = c.red },
-    IndentBlanklineIndent2         = { fg = c.orange },
-    IndentBlanklineIndent3         = { fg = c.green },
-    IndentBlanklineIndent4         = { fg = c.blue },
-    IndentBlanklineIndent5         = { fg = c.purple },
-    IndentBlanklineIndent6         = { fg = c.cyan },
-    -- ibl v3
-    IblIndent                      = { fg = c.border },
-    IblScope                       = { fg = c.blue },
+    IndentBlanklineChar         = { fg = c.border },
+    IndentBlanklineContextChar  = { fg = c.blue },
+    IndentBlanklineContextStart = { sp = c.blue, style = "underline" },
+    IblIndent                   = { fg = c.border },
+    IblScope                    = { fg = c.blue },
 
     -- ── Trouble ────────────────────────────────────────────────────────
     TroubleNormal          = { fg = c.fg,         bg = c.bg_alt },
@@ -547,34 +539,34 @@ function theme.loadPlugins(c)
     NotifyTRACEBody    = { fg = c.fg, bg = c.bg },
 
     -- ── Leap / Lightspeed ──────────────────────────────────────────────
-    LeapMatch          = { fg = c.bg,     bg = c.orange, style = "bold" },
-    LeapLabelPrimary   = { fg = c.bg,     bg = c.red,    style = "bold" },
-    LeapLabelSecondary = { fg = c.bg,     bg = c.purple, style = "bold" },
-    LeapBackdrop       = { fg = c.fg_gutter },
-    LightspeedLabel    = { fg = c.bg,     bg = c.red,    style = "bold" },
-    LightspeedLabelOverlapped= { fg = c.bg, bg = c.orange, style = "bold" },
-    LightspeedLabelDistant   = { fg = c.bg, bg = c.purple, style = "bold" },
-    LightspeedShortcut       = { fg = c.bg, bg = c.cyan,   style = "bold" },
+    LeapMatch                = { fg = c.bg,  bg = c.orange, style = "bold" },
+    LeapLabelPrimary         = { fg = c.bg,  bg = c.red,    style = "bold" },
+    LeapLabelSecondary       = { fg = c.bg,  bg = c.purple, style = "bold" },
+    LeapBackdrop             = { fg = c.fg_gutter },
+    LightspeedLabel          = { fg = c.bg,  bg = c.red,    style = "bold" },
+    LightspeedLabelOverlapped= { fg = c.bg,  bg = c.orange, style = "bold" },
+    LightspeedLabelDistant   = { fg = c.bg,  bg = c.purple, style = "bold" },
+    LightspeedShortcut       = { fg = c.bg,  bg = c.cyan,   style = "bold" },
     LightspeedGreywash       = { fg = c.fg_gutter },
 
     -- ── Dashboard / Alpha ──────────────────────────────────────────────
-    DashboardHeader    = { fg = c.purple },
-    DashboardCenter    = { fg = c.blue },
-    DashboardShortcut  = { fg = c.cyan },
-    DashboardFooter    = { fg = c.fg_comment, style = c.italic },
-    AlphaHeader        = { fg = c.purple },
-    AlphaButtons       = { fg = c.blue },
-    AlphaShortcut      = { fg = c.cyan },
-    AlphaFooter        = { fg = c.fg_comment, style = c.italic },
+    DashboardHeader  = { fg = c.purple },
+    DashboardCenter  = { fg = c.blue },
+    DashboardShortcut= { fg = c.cyan },
+    DashboardFooter  = { fg = c.fg_comment, style = c.italic },
+    AlphaHeader      = { fg = c.purple },
+    AlphaButtons     = { fg = c.blue },
+    AlphaShortcut    = { fg = c.cyan },
+    AlphaFooter      = { fg = c.fg_comment, style = c.italic },
 
     -- ── Which-key ──────────────────────────────────────────────────────
-    WhichKey           = { fg = c.blue },
-    WhichKeyGroup      = { fg = c.purple },
-    WhichKeyDesc       = { fg = c.fg },
-    WhichKeySeparator  = { fg = c.fg_gutter },
-    WhichKeyFloat      = { bg = c.bg_alt },
-    WhichKeyBorder     = { fg = c.border },
-    WhichKeyValue      = { fg = c.fg_comment },
+    WhichKey          = { fg = c.blue },
+    WhichKeyGroup     = { fg = c.purple },
+    WhichKeyDesc      = { fg = c.fg },
+    WhichKeySeparator = { fg = c.fg_gutter },
+    WhichKeyFloat     = { bg = c.bg_alt },
+    WhichKeyBorder    = { fg = c.border },
+    WhichKeyValue     = { fg = c.fg_comment },
 
     -- ── Rainbow delimiters ─────────────────────────────────────────────
     RainbowDelimiterRed    = { fg = c.red },
@@ -590,8 +582,8 @@ function theme.loadPlugins(c)
     MiniCursorword                = { bg = c.bg_highlight },
     MiniCursorwordCurrent         = { bg = c.bg_highlight },
     MiniIndentscopeSymbol         = { fg = c.blue },
-    MiniJump                      = { fg = c.bg, bg = c.orange },
-    MiniJump2dSpot                = { fg = c.bg, bg = c.red, style = "bold" },
+    MiniJump                      = { fg = c.bg,  bg = c.orange },
+    MiniJump2dSpot                = { fg = c.bg,  bg = c.red,  style = "bold" },
     MiniStatuslineDevinfo         = { fg = c.fg_alt,    bg = c.bg_alt },
     MiniStatuslineFileinfo        = { fg = c.fg_alt,    bg = c.bg_alt },
     MiniStatuslineFilename        = { fg = c.fg,        bg = c.bg_alt },
@@ -611,8 +603,8 @@ function theme.loadPlugins(c)
     MiniTablineTabpagesection     = { fg = c.bg,        bg = c.fg_gutter },
     MiniTablineVisible            = { fg = c.fg,        bg = c.bg_alt },
     MiniTestEmphasis              = { style = "bold" },
-    MiniTestFail                  = { fg = c.red,       style = "bold" },
-    MiniTestPass                  = { fg = c.green,     style = "bold" },
+    MiniTestFail                  = { fg = c.red,   style = "bold" },
+    MiniTestPass                  = { fg = c.green, style = "bold" },
     MiniTrailspace                = { bg = c.red },
 
     -- ── nvim-dap ───────────────────────────────────────────────────────
@@ -635,10 +627,10 @@ function theme.loadPlugins(c)
     DapUIWatchesEmpty      = { fg = c.red },
     DapUIWatchesValue      = { fg = c.green },
     DapUIWatchesError      = { fg = c.red },
-    DapUIBreakpointsPath   = { fg = c.blue },
-    DapUIBreakpointsInfo   = { fg = c.green },
-    DapUIBreakpointsCurrentLine  = { fg = c.green, style = "bold" },
-    DapUIBreakpointsDisabledLine = { fg = c.fg_gutter },
+    DapUIBreakpointsPath              = { fg = c.blue },
+    DapUIBreakpointsInfo              = { fg = c.green },
+    DapUIBreakpointsCurrentLine       = { fg = c.green, style = "bold" },
+    DapUIBreakpointsDisabledLine      = { fg = c.fg_gutter },
   })
 end
 
