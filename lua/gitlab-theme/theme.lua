@@ -18,8 +18,8 @@ function theme.loadEditor(c)
     CursorLineNr   = { fg = c.blue,       bg = c.bg_highlight, style = "bold" },
     CursorColumn   = { bg = c.bg_highlight },
     ColorColumn    = { bg = c.bg_alt },
-    Visual         = { bg = c.bg_highlight },
-    VisualNOS      = { bg = c.bg_highlight },
+    Visual         = { bg = c.sel_bg },
+    VisualNOS      = { bg = c.sel_bg },
 
     -- Line numbers / gutter
     LineNr         = { fg = c.fg_gutter },
@@ -381,7 +381,7 @@ function theme.loadPlugins(c)
     TelescopeResultsTitle    = { fg = c.bg_alt,     bg = c.bg_alt },
     TelescopePromptPrefix    = { fg = c.blue },
     TelescopeSelectionCaret  = { fg = c.orange },
-    TelescopeSelection       = { fg = c.fg,         bg = c.bg_highlight },
+    TelescopeSelection       = { fg = c.fg,         bg = c.sel_bg },
     TelescopeMatching        = { fg = c.orange,     style = "bold" },
     TelescopeMultiSelection  = { fg = c.purple },
 

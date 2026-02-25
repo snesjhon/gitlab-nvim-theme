@@ -17,7 +17,8 @@ local palette = {
 
   -- Derived
   bg_alt      = "#F0F0FA", -- sidebar, float, panels
-  bg_highlight= "#EFEFFC", -- cursorline, visual
+  bg_highlight= "#EFEFFC", -- cursorline
+  sel_bg      = "#E2DEF8", -- selection bg (~30% selection tint) — Telescope, Visual
   border      = "#D0D0E8", -- window separators
   fg_gutter   = "#A0A0C0", -- line numbers, gutter
   fg_comment  = "#7878A8", -- comments (muted purple-blue)
