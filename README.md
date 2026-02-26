@@ -5,7 +5,7 @@ A Neovim colorscheme based on the [GitLab](https://gitlab.com) color palette. Su
 | Variant | Status |
 |---------|--------|
 | `gitlab_light` | ✅ Available |
-| `gitlab_dark` | 🚧 Coming soon |
+| `gitlab_dark` | ✅ Available |
 
 ## Features
 
@@ -42,6 +42,8 @@ You can also call `load()` directly instead of using `:colorscheme`:
 
 ```lua
 require("gitlab-theme").load({ theme = "gitlab_light" })
+-- or
+require("gitlab-theme").load({ theme = "gitlab_dark" })
 ```
 
 ### [packer.nvim](https://github.com/wbthomason/packer.nvim)

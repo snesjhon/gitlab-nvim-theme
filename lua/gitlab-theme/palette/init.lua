@@ -3,7 +3,7 @@ local M = {}
 -- Map theme name → palette module
 local themes = {
   gitlab_light = "gitlab-theme.palette.gitlab_light",
-  -- gitlab_dark  = "gitlab-theme.palette.gitlab_dark",  -- coming soon
+  gitlab_dark  = "gitlab-theme.palette.gitlab_dark",
 }
 
 ---Load the raw palette for a given theme name.
